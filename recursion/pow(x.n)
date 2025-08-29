@@ -1,0 +1,38 @@
+This is the naive methord of finding power, it has time of n.
+
+class Solution {
+    double poww(double x, int n) {
+        if (n == 0)
+            return 1; // base case: x^0 = 1
+        return poww(x, n - 1) * x; // naive recursion
+    }
+
+public:
+    double myPow(double x, int n) {
+        if (n < 0)
+            return 1.0 / poww(x, -n); // handle negative powers
+        return poww(x, n);
+    }
+};
+
+
+but to pass all test cases, we should use divide and conquer methord, where it divides the problem into smaller problems and solves them.
+
+class Solution {
+public:
+    double myPow(double x, int n) {
+        if (n < 0)
+            return 1.0 / poww(x, -n); // handle negative powers
+        return poww(x, n);
+    }
+    double poww(double x, int n) {
+        if (n == 0)
+            return 1; // base case: x^0 = 1
+        if (n % 2 == 0)
+            return poww(x * x, n / 2); // divide and conquer
+        return x * poww(x, n - 1); // naive recursion
+    }
+};
+
+
+Time complexity: O(logn)

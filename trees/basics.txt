@@ -1,0 +1,11 @@
+full bt->either has 0 or 2 children
+
+complete bt->all levels are filled except the last level.
+           ->the last level should have the nodes filled in the left first.
+
+perfect bt-> all leaf nodes are at same level
+
+balanced bt-> height of tree is max log(N) N->nodes
+
+degenerate trees-> its a line of nodes like this->
+

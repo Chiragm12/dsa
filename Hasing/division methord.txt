@@ -1,0 +1,15 @@
+[2, 5,16, 28,139]
+so instead of making a array of 140 size, we'll make a array of size 10, from 0-9,
+and do 2% 10, and the answer is where we'll be storing the number, so we'll get the index of the array, 
+and we'll store the number in the array.
+linear chaining->
+0-
+1-
+2-2
+3-
+4-
+5-5
+6-16->26
+7-
+8-28->38
+9-139   

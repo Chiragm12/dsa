@@ -1,0 +1,3 @@
+1. if you wanna travers a linked lists, and compare the value from behind, use stack its LIFO, so pop the elements from stack
+and again compare from the value from the linked lists (can be used to check if palindrome)
+2.see the del nth node.

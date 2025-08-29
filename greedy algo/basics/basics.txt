@@ -1,0 +1,3 @@
+1. image 1 says that u have to travel from a to b in 12 hours, and u have different modes of transport like s1,s2,s3, 
+but for the most optimal solution u have to travel either from s4 or s5, and since s4 is shorter than s5 so we have to
+we travel using s4, this is called optimization

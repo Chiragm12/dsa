@@ -1,0 +1,2 @@
+1. If they ask "combinatoin" or "sub sequence" then we use recursion.
+2.

@@ -1,0 +1,31 @@
+
+ // so what we do for selectoin sort is, instead of having a third variabl said min val, keep swapping and checking the next val
+ struct ListNode {
+      int val;
+      ListNode *next;
+      ListNode() : val(0), next(nullptr) {}
+      ListNode(int x) : val(x), next(nullptr) {}
+      ListNode(int x, ListNode *next) : val(x), next(next) {}
+  };
+ 
+class Solution {
+public:
+    ListNode* sortList(ListNode* head) {
+        if (head == nullptr || head->next == nullptr) return head;
+        ListNode* temp=head;
+        while(temp!=nullptr){
+            ListNode* temp1=temp->next;
+            while(temp1!=nullptr){
+                if(temp->val>temp1->val){
+                    int temp2=temp1->val;
+                    temp1->val=temp->val;
+                    temp->val=temp2;
+                }
+                temp1=temp1->next;
+            }
+            temp=temp->next;
+        }
+        return head;
+      
+    }
+};

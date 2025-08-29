@@ -1,0 +1,35 @@
+class Solution {
+public:
+    string reverseWords(string s) {
+        vector<string> arr;
+        string res;
+
+        for (char ch : s) {
+            if (ch == ' ') {
+                if (!res.empty()) {
+                    arr.push_back(res);
+                    res.clear();
+                }
+            } else {
+                res += ch;
+            }
+        }
+
+        // Add last word if it exists
+        if (!res.empty()) {
+            arr.push_back(res);
+        }
+
+        // Reverse the words
+        reverse(arr.begin(), arr.end());
+
+        // Join them back
+        string sent;
+        for (int i = 0; i < arr.size(); i++) {
+            sent += arr[i];
+            if (i != arr.size() - 1) sent += " ";
+        }
+
+        return sent;
+    }
+};

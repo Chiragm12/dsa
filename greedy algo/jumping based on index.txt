@@ -1,0 +1,3 @@
+1. here we jump based on index, and the value, so if the max value is less than or equal to the value positioned at 0, then its false
+2. for minium number of platforms, we sort the array, and for every arrival we subtract count, and for every departure we add count
+and we return the max value of count.

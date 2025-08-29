@@ -1,0 +1,45 @@
+//you can store unordered_map in a variable and then compare them
+//the below is to compare two unordered_map<char,int> for equality
+bool equal = true;
+
+// Check all keys in countS against countT
+for (auto& [key, val] : countS) {
+    if (countT[key] != val) {
+        equal = false;
+        break;
+    }
+}
+
+ // to iterate through the map and find the key with the maximum value
+    int maxVal = INT_MIN;
+    char maxKey;
+
+    for (const auto& [key, val] : myMap) {
+        if (val > maxVal) {
+            maxVal = val;
+            maxKey = key;
+        }
+    }
+
+// Also check if countT has any extra keys not in countS
+if (equal) {
+    for (auto& [key, val] : countT) {
+        if (countS[key] != val) {
+            equal = false;
+            break;
+        }
+    }
+}
+
+// actual answer
+class Solution {
+public:
+    bool isAnagram(string s, string t) {
+        unordered_map<char,int> s1,s2;
+       for(int i=0;i<s.length();i++){
+        s1[s[i]]+=1;
+        s2[t[i]]+=1;
+       }
+            return s1==s2;
+    }
+};

@@ -1,0 +1,17 @@
+
+#include<stdio.h>
+#include<iostream>
+#include<string>
+using namespace std;
+
+void printNumbers(int i, int n) {
+    if (i == n) return;
+    cout << i << endl;
+    printNumbers(i + 1, n);
+}
+
+int main(){
+    int n;
+    cin>>n;
+    printNumbers(1,n);
+}

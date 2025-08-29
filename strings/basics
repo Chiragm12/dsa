@@ -1,0 +1,123 @@
+// size of a string-> .length or .size()
+//to check if 2 strings are equal, use "=="
+// to check if a letter is there in a string
+//how to iterate through string
+for(char ch: s) {
+    cout << ch << " ";
+}
+// to store letter from this to another string do->
+string res;
+res+=ch;
+
+to access letters in a word in a array like-> ["hello","world"]
+you can do arr[i][j] where i is the index of the word and j is the index of the letter in that word.
+
+//vvvv imppppp
+unordered_map<string, string> myMap;
+
+    myMap["India"] = "New Delhi";
+    myMap["USA"] = "Washington, D.C.";
+    myMap["France"] = "Paris";
+    if your checking charecter, do <char,char> instead of <string,string>
+    mapp.count(s[i]) to check if the letter exists in the map
+
+isalpha(s[i]) to check if the letter is alphabet
+isdigit(s[i]) to check if the letter is digit
+isupper(s[i]) to check if the letter is uppercase
+islower(s[i]) to check if the letter is lowercase
+toupper(s[i]) to convert the letter to uppercase
+tolower(s[i]) to convert the letter to lowercase
+
+// to check if a string is palindrome or not
+bool isPalindrome(string s) {
+    int n = s.length();
+    for (int i = 0; i < n / 2; i++) {
+        if (s[i] != s[n - i - 1]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+    s.substr(i)
+📌Returns the substring of s starting at index i to the end.
+
+Example: If s = "abcde" and i = 2, then s.substr(2) → "cde"
+
+📌 s.substr(0, i)
+Returns the first i characters of s.
+
+Example: If s = "abcde" and i = 2, then s.substr(0, 2) → "ab"
+
+📌 Combined: s.substr(i) + s.substr(0, i)
+Concatenates the two parts: from i to end, then beginning to i.
+
+This is equivalent to rotating the string s left by i characters.
+
+
+
+
+
+// User function Template for C++
+#include<string.h>
+class Solution {
+  public:
+
+    // Function to search for a character in the string
+    int searchCharacter(string &s, char ch) {
+        // code here
+        int n=s.size();
+        for(int i=0;i<n;i++){
+            if(s[i]==ch) return i;
+        }
+        return -1;
+        
+    }
+};
+
+
+//insert a element at a certain position
+
+// C++ program to insert a character at specific
+// position using Built in functions
+  
+using namespace std;
+
+string insertChar(string &s, char c, int pos) {
+  
+    // Insert character at specified position
+    s.insert(s.begin() + pos, c);
+  	return s;
+}
+
+int main() {
+    string s = "Geeks";
+    cout << insertChar(s, 'A', 3);
+    return 0;
+}
+
+// how to remove a letter from a string
+
+using namespace std;
+
+void customRemoveCharAtPosition(string &s, int pos) {
+  
+    if (pos < 0 || pos >= s.length()) {
+        return; 
+    }
+
+    // Shift characters to the left from the position
+    for (int i = pos; i < s.length() - 1; i++) {
+        s[i] = s[i + 1];
+    }
+
+    s.resize(s.length() - 1);
+}
+
+int main() {
+    string s = "abcde";
+    int pos = 1;
+    customRemoveCharAtPosition(s, pos);
+    cout << s << endl; 
+    return 0;
+}

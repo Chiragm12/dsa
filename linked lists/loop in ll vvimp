@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+#include <unordered_set>
+
+ struct ListNode {
+      int val;
+      ListNode *next;
+      ListNode(int x) : val(x), next(NULL) {}
+  };
+class Solution {
+public:
+    bool hasCycle(ListNode *head) {
+        unordered_set<ListNode*> visited;
+        ListNode* temp = head;
+        
+        while (temp != nullptr) {
+            if (visited.count(temp)) {
+                return true;  // Cycle detected
+            }
+            visited.insert(temp);
+            temp = temp->next;
+        }
+        
+        return false;  // No cycle
+    }
+};

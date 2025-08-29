@@ -1,0 +1,36 @@
+//here ull get errors for the last line, whlie ur doing the temp->next=temp->next->next,
+// ull get errors cause udk if temp is nullptr or not, hence dor a for loop for the temp, then do 
+#include <iostream>
+using namespace std;
+
+class Solution {
+public:
+    ListNode* removeNthFromEnd(ListNode* head, int n) {
+        int count = 0;
+        ListNode* temp = head;
+
+        // Count total nodes
+        while (temp != nullptr) {
+            count++;
+            temp = temp->next;
+        }
+
+        if (count == n) {
+            ListNode* newHead = head->next;
+            delete head;
+            return newHead;
+        }
+        // ******************************* vvimp ******************************
+        temp = head;
+        for (int i = 1; i < count - n; i++) {
+            temp = temp->next;
+        }
+
+        // Remove the target node
+        ListNode* todel = temp->next;
+        temp->next = temp->next->next;
+        delete todel;
+
+        return head;
+    }
+};

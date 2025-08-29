@@ -1,0 +1,4 @@
+so what we do is, 
+when we push root, it only pushes the root and not the left and right child.
+so what we do is, we push it first into a queueu, then finally push it into a array, 
+so in second level, we push both the elements into the queueu, then we push it into the array. third level mai also same thing

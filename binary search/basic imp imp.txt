@@ -1,0 +1,2 @@
+in this, if sorted array is there or we should solve in log(n) time, always use binary search, and only the inital codition changes, 
+rest all remains the same.
