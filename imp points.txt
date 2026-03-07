@@ -1,0 +1,22 @@
+1. sort(arr.begin(), arr.end()) sorts in assending order
+2. sort(arr.rbegin(), arr.rend()) sorts in descending order
+3.you cant use .count in hashs, only on map and sets
+4. operations on sets seen.count(s[right]),seen.insert(s[right]),seen.erase(s[left]); this only removes one element doesnt delete everything
+5. in trees, what your returning in the last, is whats the output of the nodes, so assume it starts
+from the last, and ull understand codes better
+6.if (mpp.find(line) == mpp.end())
+                mpp[line] = node->data;
+                mpp = {
+   -2 : 4,
+   -1 : 2,
+    0 : 1,
+    1 : 3
+}
+map stores the data in order like the above.
+
+7. Char 37: runtime error: member access within null pointer of type 'TreeNode' (solution.cpp)
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior prog_joined.cpp:34:37
+
+means you have to add this->> if(root==nullptr) return ans;
+8. if your input is a number like bool armstrong(n), then you can not do operations like n.size(),n[i] as it is not a array,
+but a number.

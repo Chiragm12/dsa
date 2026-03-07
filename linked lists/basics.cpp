@@ -1,6 +1,9 @@
 // to run the code g++ basics.cpp -o basics, and then ./basics
 // here insteaf of using null like we do in c, we use nullptr ***********
 // instead of free(), we do  delete toDelete;
+
+// check selectoin sort ad merge sort codes for array and for linkedlists
+
 #include <iostream>
 using namespace std;
 

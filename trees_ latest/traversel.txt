@@ -1,0 +1,32 @@
+u have bfs and dfs
+
+dfs there is 3 types-> 
+1. inorder      left root right
+2. preorder     root left right
+3. postorder    left right root
+
+
+preorder->
+
+void preorder(node){
+    if(node==null) return;
+    cout<<(node->data);
+    preorder(node->left);
+    preorder(node->right);
+}
+
+inorder->
+void inorder(node){
+    if(node==null) return;
+    inorder(node->left);
+    cout<<(node->data);
+    inorder(node->right);
+}
+
+postorder->
+void postorder(node){
+    if(node==null) return;
+    postorder(node->left);
+    postorder(node->right);
+    cout<<(node->data);
+}

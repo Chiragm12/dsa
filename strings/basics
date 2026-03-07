@@ -21,6 +21,8 @@ unordered_map<string, string> myMap;
     if your checking charecter, do <char,char> instead of <string,string>
     mapp.count(s[i]) to check if the letter exists in the map
 
+
+    to convert string/char to num -> s[i] -'0'
 isalpha(s[i]) to check if the letter is alphabet
 isdigit(s[i]) to check if the letter is digit
 isupper(s[i]) to check if the letter is uppercase
@@ -121,3 +123,8 @@ int main() {
     cout << s << endl; 
     return 0;
 }
+
+
+//how to write to a string mulltiple times using append
+
+ans.append(number of times you want to repeat,letter you want to repeat)

@@ -1,2 +1,6 @@
 1. If they ask "combinatoin" or "sub sequence" then we use recursion.
-2.
+2.  for reversing a string using recursion we cna do it using 2 pointers, l and r, and then f(l+1,r-1) u can do
+and for the condition just do if (l>=r) return asthe
+or if we observe the l shuold go to the last element, and l+1 to the last previous element, so its like l-> n-i-1
+so you can do that
+so swap(a[l],a[n-i-1])

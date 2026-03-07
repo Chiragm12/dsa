@@ -10,9 +10,12 @@ using namespace std;
 //so here we store it using map, so in array we need to declare the size of the array,
 //and memory will be allocated for the array, but for maps, only the ele we need to store is allocated
 //time complexity is O(logn)
+
+//imp point is that keys are stored in sorted order
 int main(){
     int n;
     cin>>n;
+    //should use vector<int> arr(n)
     int arr[n];
     for(int i=0;i<n;i++){
         cin>>arr[i];

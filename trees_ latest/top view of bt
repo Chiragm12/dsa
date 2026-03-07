@@ -1,0 +1,33 @@
+// you have to print the top view of bt, so you initally push ele to queue, then get left and right child, and push to map, 
+// if the position already exists in map, then do nothing, just ignore, but if it does not exist add it.
+
+
+class Solution {
+  public:
+    vector<int> topView(Node *root) {
+        // code here
+        vector<int>ans;
+        if(root==nullptr) return ans;
+        map<int,int>mpp; // this is for the unique set of elements like
+        queue<pair<Node*,int>>q; //this is to get all the nodes 
+        q.push({root,0});
+        while(!q.empty()){
+            auto it=q.front();
+            q.pop();
+            Node* node=it.first;
+            int line=it.second;
+            if(mpp.find(line)==mpp.end())mpp[line]=node->data;
+            if(node->left!=NULL){
+                q.push({node->left,line-1});
+            }
+            if(node->right!=NULL){
+                q.push({node->right,line+1});
+            }
+        }
+        
+        for(auto it:mpp){
+            ans.push_back(it.second);
+        }
+        return ans;
+    }
+};

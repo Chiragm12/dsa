@@ -1,11 +1,20 @@
 /*
 brute force methrod is use sets, and then 
 it'll automatically take only the unique elements
-index=0
-for(auto it:st){
-arr[index]=it;
-index++;
-}
+class Solution {
+public:
+    int removeDuplicates(vector<int>& nums) {
+        int index=0;
+        set<int>st;
+        for(auto x:nums){
+            st.insert(x);
+        }
+        for(int x:st){
+            nums[index++]=x;
+        }
+        return index;
+    }
+};
 time complexity is nlogn
 */
 

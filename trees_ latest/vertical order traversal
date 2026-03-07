@@ -1,0 +1,52 @@
+same logic as the boundry traversal,using a queue and all, in ours we use a coordinate system starting at (0,0)
+if we go left add it as -1, if we go right add it as 1.
+(3,1,2)-> 3 is the val, 1-> the direction which is right side, 2-> level
+in the q ,we store the (3,1,2) in the map we store the final data, 
+{
+  -1: { 1: {9} },
+   0: { 0: {3}, 2: {15} },
+   1: { 1: {20} },
+   2: { 2: {7} }
+}
+this is how nodes map looks like
+
+class Solution {
+public:
+    vector<vector<int>> verticalTraversal(TreeNode* root) {
+        // nodes[x][y] stores all nodes at vertical x and level y
+        map<int, map<int, multiset<int>>> nodes;
+        queue<pair<TreeNode*, pair<int, int>>> todo; // node, (x, y)
+
+        todo.push({root, {0, 0}});
+
+        while (!todo.empty()) {
+            auto p = todo.front();
+            todo.pop();
+
+            TreeNode* node = p.first;
+            int x = p.second.first;
+            int y = p.second.second;
+
+            nodes[x][y].insert(node->val);
+
+            if (node->left)
+                todo.push({node->left, {x - 1, y + 1}});
+
+            if (node->right)
+                todo.push({node->right, {x + 1, y + 1}});
+        }
+
+        vector<vector<int>> ans;
+
+        // traverse the map in sorted x order
+        for (auto& p : nodes) {
+            vector<int> col;
+            for (auto& q : p.second) {
+                col.insert(col.end(), q.second.begin(), q.second.end());
+            }
+            ans.push_back(col);
+        }
+
+        return ans;
+    }
+};

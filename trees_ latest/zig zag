@@ -1,0 +1,40 @@
+// here initally, we insert node, and change the flag, next we insert 2,3 into the queue and change  flage, then we check for left 
+// and right node of 2 and 3, and insert them into the queue, and check flag condition and based on flag conditoin we push the 
+// elements from the q to the vector asthe
+
+
+vector<vector<int>> zigzagLevelOrder(TreeNode* root) {
+    vector<vector<int>> result;   // final output
+    if (!root) return result;     // base case: empty tree
+
+    queue<TreeNode*> q;           // for BFS traversal
+    q.push(root);
+    bool leftToRight = true;      // direction flag
+
+    while (!q.empty()) {
+        int size = q.size();      // number of nodes at this level
+        vector<int> row;          // stores values of current level
+
+        // process all nodes in this level
+        for (int i = 0; i < size; i++) {
+            TreeNode* node = q.front();
+            q.pop();
+            row.push_back(node->val);  // add the node’s value
+
+            // push children for the next level
+            if (node->left) q.push(node->left);
+            if (node->right) q.push(node->right);
+        }
+
+        // reverse row if direction is right→left
+        if (!leftToRight) reverse(row.begin(), row.end());
+
+        // toggle direction for next level
+        leftToRight = !leftToRight;
+
+        // add current row to result
+        result.push_back(row);
+    }
+
+    return result;
+}

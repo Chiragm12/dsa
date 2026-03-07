@@ -21,7 +21,7 @@ public:
             if(sum > maxSum)
                 maxSum = sum;
 
-            if(sum < 0)
+            if(sum < 0) //as they told you can also give the output as a empty array
                 sum = 0;
         }
 

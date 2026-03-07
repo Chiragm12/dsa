@@ -1,0 +1,9 @@
+so basically ull take one fast and one slow pointer and they both point to the same node at the end.
+so in a track assume a and b, so a is sp, b is fp, so by the time a completes 1 round, b completes 2 ronuds, 
+so in ll problms like detecting cycle and all, by the time the slow pointer just reaches the end of the ll, the fast
+poniter would complete the ll, and also the list and return back see 1, for reference
+
+can be used to detect stuff, like in question "happy number"
+
+in the vvimp, we use fast and slow poniter to detect cycle, then we loop around in that cycle till we reach the slow pointer,
+and keep a count of it and return that only asthe

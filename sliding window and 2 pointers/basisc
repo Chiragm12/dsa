@@ -1,0 +1,21 @@
+in sliding window you have 2 types
+
+1. Fixed Size Window
+
+Window size does not change.
+
+Example problems:
+
+Maximum sum of subarray of size k
+
+First negative number in every window of size k
+
+2. Dynamic (Variable) Window
+
+Window size changes based on a condition.
+
+Example problems:
+
+Longest substring without repeating characters
+
+Smallest subarray with sum ≥ target

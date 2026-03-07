@@ -15,7 +15,7 @@ void explain_pairs(){
     cout<<arr[1].first;
 }
 
-void explain_vector(){
+void explain_vector(){  
     //vector is a dynamic array and can change in size
     vector<int> v;
     v.push_back(1);
@@ -79,7 +79,7 @@ void explain_vector(){
     v.clear();
     cout<<v.empty()<<endl; //this is true
 }
-
+//nothing but doubly linked list
 void explain_list(){
     list<int> ls;
 
@@ -171,12 +171,13 @@ void explain_map(){
     map<int,int> m;
     // key,value is how its stored
     map<pair<int, int>,int>m2;
+    map<int, int>mpp;
     mpp[1]=2;//inserts the element (1,2) into the map
-    mpp.emplaec(1,2);//inserts the element (1,2) into the map
+    mpp.emplace(1,2);//inserts the element (1,2) into the map
     mpp.insert({1,2});//inserts the element (1,2) into the map
     mpp[{1,2}]=3;//inserts the element (1,2) into the map
     for(auto it:mpp){
-        cout<<it.first<<" "<<it.second<<endl; // prints 1 2 then 1 2 then 1 2
+        cout<<it.first<<" "<<it.second<<en  dl; // prints 1 2 then 1 2 then 1 2
     }
     cout<<mpp[1]<<endl;//prints 2
     auto it=mpp.find(1);//finds the element (1,2) in the map

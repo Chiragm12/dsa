@@ -1,0 +1,20 @@
+the q basically says that once the recent common element from the path of root to the 2 elements, so logic is that, go to root element
+if it does not have a left element or right ele, just return the ele its self, but if the element like 3 has both right and left, then return
+that number its self, like 8 and 4, since 4 has no right side, just return 8 ashte, like that.
+basically the logic is that for it to have common ancenstor 
+
+
+
+class Solution {
+public:
+    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+        if(root==nullptr||root==p||root==q) return root;
+        TreeNode* left=lowestCommonAncestor(root->left,p,q);
+        TreeNode* right=lowestCommonAncestor(root->right,p,q);
+        if(left==NULL)return right;
+        else if(right==NULL) return left;
+        else{
+            return root;
+        }
+    }
+};
