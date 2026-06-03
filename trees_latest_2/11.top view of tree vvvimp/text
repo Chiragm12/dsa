@@ -1,0 +1,4 @@
+so here we have a queue, that'll have the left and right node pushed when root is inserted, and in the map, we have it like
+line, node so for that line that node is there, and for the nodes below the node, it should not be printed right, so 
+in the map, we will do a check before inserting into the map that if the line already exists to do insert into the map, 
+and then in the end just sort the map according the lines, and print the node values 

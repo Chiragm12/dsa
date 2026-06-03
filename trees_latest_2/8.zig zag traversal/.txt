@@ -1,0 +1,1 @@
+so what to do is same thing, as level order traaversal, but have a flag that makes the array ulta asthe

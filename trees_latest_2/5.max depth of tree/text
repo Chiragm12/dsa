@@ -1,0 +1,2 @@
+you assume it as only one tree, and then solve, that time you will understand,
+ so if we assume one tree, we need left, right node, and then we compare, hence the 1+max(lh,rh).

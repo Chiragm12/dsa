@@ -1,0 +1,9 @@
+so basically the output should be the boundry valuse,
+1 2 3 4 5 6 10 11 9 8 7
+this should be the output,
+so we divide into 3 functions
+
+1. the first function goes for the left subtree, and keeps adding the left element, if its over, then goes to the right and 
+checks for the left.
+2. leaf nodes, if we reach leaf node do inorder traversal, as in the right tree if we follow the above it'll be a problem
+3. in the rght side do the same but in the end just reverse the array asthe

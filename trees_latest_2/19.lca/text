@@ -1,0 +1,8 @@
+so what we do here is we find the path from the root till the node, so here for 4 it will be 1,2,4 and for 7 it will be 1,2,5,7
+then we start comparing until we get the number which they dont match
+
+so here, 1 and 2 are same, but the third number 4 and 5 are not same, so the prev number is the answer.
+
+but this methord is not optimal,so wat we do is
+we just return the values, so if its the desired value, send it up, and in the root u check, if one side mai u get nullptr and other side u get number meaning
+u should know that it is not the ancestor, but, if the root node recieves numbers fom both the sides,it means it is a ancestor, and u shld return that value

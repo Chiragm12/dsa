@@ -1,0 +1,6 @@
+easy just do inorder traversal as in bst it'll give the numbers in sorted way
+
+then just find the 3rd element, so just keep a count, if it reaches 3 then thats the 3rd smallest number
+
+if they ask 3 largest number instead, it means its nothing but the n-3 smallest number, so keep k as that and
+use the same approach

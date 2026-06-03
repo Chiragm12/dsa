@@ -1,0 +1,6 @@
+so what happens is, u have 2 ds, one for maintaining the q, and  the other ds, we use q so we pop out the elements together int the level, 
+and push them together in the array.
+so what happens is, after poping from q, u have 2 lines where it says you have to push left and right, we do that so that 
+it can be used in the next level, hence we push the left and right
+
+and then we push the root ele into a temp array, and push thta into the main array

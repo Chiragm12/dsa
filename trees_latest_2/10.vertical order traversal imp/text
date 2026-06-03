@@ -1,0 +1,34 @@
+so what happens is, you assume a grid, and int he img1, ull see how it is,
+so when you go to the left from the root, you go from (0,0) to -1,1, -1 as ur going to the left of 0
+1 as you are going from top to bottom hence
+
+now for the root ka right side, it will be 1,1
+
+basically if you are going left side, add -1, if you are going right side add 1, if you are gonig down add 1
+
+asthe
+
+now for the multiset, we use multiset to store the answers as the node valuses might be repeated hence if we use set
+the values wont be stored, so we store using multiset
+
+
+we use multiset so we can store the values like this
+
+nodes
+|
+|- -1
+|    |- 1 -> {9}
+|
+|- 0
+|    |- 0 -> {3}
+|    |- 2 -> {15}
+|
+|- 1
+     |- 1 -> {20}
+
+
+queue<pair<TreeNode*,pair<int,int>>> q;
+
+    Meaning:
+
+(node, (x,y))

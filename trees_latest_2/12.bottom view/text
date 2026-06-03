@@ -1,0 +1,4 @@
+here we do the same as top view, so instead of not putting values if it exists, replace the values in the map if they exist.and
+if thye do not exist, push the values  
+
+map stores the data in sorted way, so no need to sort the map, just iterate and print the values

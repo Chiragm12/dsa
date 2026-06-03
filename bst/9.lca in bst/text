@@ -1,0 +1,11 @@
+basically u have the 2 numbers right you just have to find the common point of the 2 numbers from the root,
+like here lca of 5 and 9 u see, from hte root to 5, u have 5,6,,8,4,10 and from the root to 9 u have 9,8,4,10
+
+so while seeeing the tree the first common intersection point is 8
+
+so what to do is, just find the splitting point, now 5,9 check the nodes, like 8, 5 will be on the left side, and 9 will be on
+the right side, so that will be the spiltting point, and that will be the answer.
+
+
+so in the first line we go left, then in the second lnie, we go right, if we cant go in either one direction it means that 
+the spilt is found so we just return the root;

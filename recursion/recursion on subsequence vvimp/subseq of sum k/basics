@@ -1,0 +1,21 @@
+so here what happens is
+
+ds.add(arr[i])
+s += arr[i]
+f(i+1, ds, s)
+
+
+this is the adding the elemnt to the array/subsequence, update the sum, and move to the next index(picking the element)
+
+
+
+ds.remove(arr[i])
+s -= arr[i]
+
+
+vvimpp, this is the backstracking part, you remove whatvever you take,
+
+
+f(i+1, ds, s)
+
+in the last this is there, as you move forward without picking the element.

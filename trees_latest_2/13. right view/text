@@ -1,0 +1,6 @@
+so what happens here is we do it through recusrions, and since we want rightside first, we iterate right side fist
+we have aarray, so its dynamic right, so level starts with 0 and so does the array, so what we do is
+we iterate first right side, and check the level, and see that the level is equal to the size of the array
+
+as as we start with level 0, push that array size->1, next we go to the right, the level is 1, level==array size, and hence push
+its like that   

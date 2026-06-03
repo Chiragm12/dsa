@@ -1,0 +1,11 @@
+so here we use the same logic as the previous questions, so what we do is 
+instead of returning a number 1, we return the value only
+
+so assume a bt with left adn right and root asthe, 
+
+so now since it returns the path , it should be like a same line, or same curve, so the left adn right 
+we check for their maxs, so we do 
+
+return node->val + max(lh,rh) --> so what happens here is that the nodes ka left adn right ka sum will be stored at the root
+
+next we do maxx=max(maxx,lh+rh+maxx) ->> we do this to compare the both the trees, like as you know, first we check left half of the subtree, then right half, so in the end to compare whihc has more and to store the max value we do this

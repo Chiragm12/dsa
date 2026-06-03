@@ -1,0 +1,24 @@
+so we want to dete 5, so we just do the connections
+
+1. conect  8->left to 5->left, so now 8 will be connected to 2 and not 5
+2. connect 4->right to 5->left, so now we will be able to connect the the remaining subtree
+
+
+// code explanantion
+
+so in the main function we are finding the element.
+so the root->left or right part, is like ll, we are checking if the next ele is the ans, so we can directly skip it by 
+doing node->next= node->next->next; or node->next=temp->next;
+
+the helper function is the node u want to delete
+so since root->left contains 5, and the node you want to delete, you put that in the helper functoin
+
+
+next is the helper
+
+so the first part, if root->left==nullptr return root->right, is that, if the node had no left subtree, only right subtree
+directly connect 8 to the right of the subtree skipping 5, as in the  main funtcion we wrote root->left=helper(root->left), and 
+the helper functoin will be equal to root->right, skipping the 5
+
+in the last part, if the node has two subtrees, on the left and the right, then what we do is, we find last right
+on the left tree, using the function, and then we connect that to the root->right, and the connections get done
