@@ -1,0 +1,4 @@
+so we wanted to show only the ids of those who had a unique_id, and for those who dont have it should print null
+and the right hand side name shold be printed
+
+since the rhs of the table, the name should be printed, we use left join

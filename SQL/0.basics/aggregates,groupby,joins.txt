@@ -1,0 +1,32 @@
+Count rows:
+
+SELECT COUNT(*) FROM students;
+
+Average marks:
+
+SELECT AVG(marks) FROM students;
+
+Sum:
+
+SELECT SUM(marks) FROM students;
+
+Min / Max:
+
+SELECT MIN(marks), MAX(marks) FROM students;
+
+GROUP BY (VERY IMPORTANT)
+
+Example: average marks per age
+
+SELECT age, AVG(marks)
+FROM students
+GROUP BY age;
+
+JOINS
+
+SELECT 
+    a.name AS table1_name, 
+    b.name AS table2_name
+FROM [table 1] AS a 
+JOIN [table 2] AS b 
+    ON a.common_id = b.common_id;

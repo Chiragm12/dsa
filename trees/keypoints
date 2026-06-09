@@ -1,0 +1,9 @@
+1) ok, so for most problems u do checkk(root->left), checkk(root->right)
+this is basically inorder, 
+see q 22
+when you want ot check left first then root and then right like in 22 question do checkk(root->left),  your operation, checkk(root->right)
+
+2) see questions 20
+
+3) till 19, see properly then practise the rest
+

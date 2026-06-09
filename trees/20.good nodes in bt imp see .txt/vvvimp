@@ -1,0 +1,7 @@
+so in the image, you see that 
+    void checkk(TreeNode* root, int& val, int count) {}
+
+we did this, you dont put it as int &count as if you put it as & its value keeps changing through out the tree, 
+but since we want the maximum for the right and left subtree to be different, we do only int count
+
+vvimp so if you want sepeate max values for left and right subtree, use only int count, not with the &

@@ -1,0 +1,8 @@
+you basically go to one end(solution), if thats not it u go back ur previous steps, asthe, so thats called backstracking
+
+in the image, you see, once u reach a dead end, you just go back few steps and continue
+
+**we undo our decisions to try other paths**
+
+so we also use constraints, so that we dont waste time and memory in unnecessary paths if we know it wont give the ans
+see img1 for reference

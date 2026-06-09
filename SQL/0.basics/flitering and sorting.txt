@@ -1,0 +1,32 @@
+Multiple conditions:
+
+SELECT * FROM students
+WHERE marks > 80 AND age < 21;
+
+OR condition:
+
+SELECT * FROM students
+WHERE age = 19 OR age = 21;
+
+IN operator:
+
+SELECT * FROM students
+WHERE age IN (19, 21);
+
+BETWEEN:
+
+SELECT * FROM students
+WHERE marks BETWEEN 80 AND 90;
+
+
+Sorting (ORDER BY)
+
+SELECT * FROM students
+ORDER BY marks DESC;
+
+ASC = ascending (default)
+DESC = descending
+
+Limiting results
+SELECT * FROM students
+LIMIT 2;

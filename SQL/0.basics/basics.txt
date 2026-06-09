@@ -1,0 +1,13 @@
+SELECT * FROM students WHERE marks > 80;
+
+INSERT INTO students (id, name, age, marks)
+VALUES (4, 'Karan', 22, 88);
+
+
+UPDATE students
+SET marks = 95
+WHERE name = 'Rahul';
+
+DELETE FROM students
+WHERE id = 3;
+
